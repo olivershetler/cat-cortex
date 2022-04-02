@@ -12,7 +12,8 @@ In brief, these are the scripts and how to use them:
 
 This script makes the CSV files stored in the `./data/csv` directory from the data stored in the `./data/original` directory. For more details about the data, please refer to the section entitled 'The ./data/ Directory.'
 
-You DO NOT have to run this file to use the rest of the scripts, as pre-made CSV files are included in this repository.
+In order to run this file and (2), you need to create a `data/csv` directory, as it is excluded from tracking in this repository.
+
 
 (2) `AnalyzeFrequencyDistributions.R`
 
@@ -25,10 +26,6 @@ This script analyzes the frequency distributions of the spike trains in the CSV 
 
 
 ## Compatibility
-
-This project relies on the following R libraries:
-- tidyverse (and its dependencies)
--
 
 In order to ensure the portability of this repository, every R file has a function called `getParentDirectory()` which was inspired by this [Stack Overflow thread](https://stackoverflow.com/questions/47044068/get-the-path-of-current-script). I have not tested the function on Windows and Mac. I do not expect any problems, but there might be compatibility issues. In particular, since this repository was built on the Ubuntu Linux operating system (v 21.10), relative file paths are written using forward slashes. It is possible, especially on Windows, that the output of `getParentDirectory()` could produce backward slashes that are incompatible with with the convention for the relative paths. Therefore, if any file location errors arise, please try printing the file paths to check for slash issues as a first line of defence.
 
